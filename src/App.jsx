@@ -17,6 +17,12 @@ export const goods = [
 
 export const App = () => {
   const [selectedGood, setSelectedGood] = useState('Jam');
+  const [sign, setSign] = useState('-');
+  const [highlight, setHighlight] = useState('button is-info');
+  const [hasBackground, setHasBackground] = useState(
+    'has-background-success-light',
+  );
+  const [hasButton, setHasButton] = useState('RemoveButton');
 
   return (
     <main className="section container">
@@ -41,13 +47,6 @@ export const App = () => {
       <table className="table">
         <tbody>
           {goods.map(good => {
-            const [sign, setSign] = useState('-');
-            const [highlight, setHighlight] = useState('button is-info');
-            const [hasBackground, setHasBackground] = useState(
-              'has-background-success-light',
-            );
-            const [hasButton, setHasButton] = useState('RemoveButton');
-
             return (
               <tr
                 data-cy="Good"
